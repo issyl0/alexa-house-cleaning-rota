@@ -1,0 +1,17 @@
+service: house-cleaning-rota
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: eu-west-1
+
+plugins:
+  - serverless-python-requirements
+
+functions:
+  registeredDomain:
+    runtime: python3.6
+    handler: handler.alexa_handler
+    description: 'Tell us which week it is and what people have to do on the cleaning rota.'
+    events:
+      - alexaSkill
