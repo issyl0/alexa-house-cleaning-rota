@@ -62,7 +62,7 @@ def check_week:
 
     week = 'Unknown'
 
-    r = requests.get('https://house-cleaning-rota.herokuapp.com/week.json')
+    r = requests.get('https://house-cleaning-rota.eu-west-2.elasticbeanstalk.com/week.json')
     week = r.json()['week']
 
     return week
@@ -72,7 +72,7 @@ def check_all_jobs:
 
     jobs = ''
 
-    r = requests.get('https://house-cleaning-rota.herokuapp.com/jobs.json')
+    r = requests.get('https://house-cleaning-rota.eu-west-2.elasticbeanstalk.com/jobs.json')
     jobs = r.json()
 
     return jobs
